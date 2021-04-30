@@ -1,0 +1,39 @@
+53.全局变量和局部变量的区别如下：
+1. 作用域不同：全局变量的作用域为整个程序，而局部变量的作用域为当前函数或循环等
+2. 内存存储方式不同：全局变量存储在全局数据区中，局部变量存储在栈区
+3. 生命期不同：全局变量的生命期和主程序一样，随程序的销毁而销毁，局部变量在函数内部或循环内部，随函数的退出或循环退出就不存在了
+4. 使用方式不同：全局变量在声明后程序的各个部分都可以用到，但是局部变量只能在局部使用。函数内部会优先使用局部变量再使用全局变量。
+54.变量的作用域链：
+定义：JavaScript中每个函数都有一个执行环境，当代码在一个环境中执行时，就会创建变量对象的作用域链。
+作用域链用途：保证对执行环境有权访问的变量和函数的有序访问。
+如果这个环境是函数，则将其活动对象作为变量对象。
+作用域链的前端，始终都是当期那执行环境的代码所在的变量对象。作用域链中的下一个变量对象来自包含（外部）环境，而在再下一个变量对象则是来自下一个包含环境，这样一直延续到全局执行环境。
+全局执行环境的变量对象始终都是作用域链中的最后一个对象。
+
+document.body.clientWidth;        //网页可见区域宽(body)
+
+document.body.clientHeight;       //网页可见区域高(body)
+
+document.body.offsetWidth;       //网页可见区域宽(body)，包括border、margin等
+
+document.body.offsetHeight;      //网页可见区域宽(body)，包括border、margin等
+
+document.body.scrollWidth;        //网页正文全文宽，包括有滚动条时的未见区域
+
+document.body.scrollHeight;       //网页正文全文高，包括有滚动条时的未见区域
+
+document.body.scrollTop;           //网页被卷去的Top(滚动条)
+
+document.body.scrollLeft;           //网页被卷去的Left(滚动条)
+
+window.screenTop;                     //浏览器距离Top
+
+window.screenLeft;                     //浏览器距离Left
+
+window.screen.height;                //屏幕分辨率的高
+
+window.screen.width;                 //屏幕分辨率的宽
+
+window.screen.availHeight;          //屏幕可用工作区的高
+
+window.screen.availWidth;           //屏幕可用工作区的宽
